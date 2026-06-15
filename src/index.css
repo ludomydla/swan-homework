@@ -29,10 +29,24 @@
   --sizing-md: 8px;
   --sizing-lg: 16px;
   --sizing-xl: 24px;
+  --sizing-xxl: 48px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--swan-bg-color);
+  height: 100vh;
 }
 
 form {
   padding: var(--sizing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sizing-xxl);
+  width: 400px;
+  background-color: #fff;
 }
 
 /* Basic CSS reset by Josh W. Comeau */

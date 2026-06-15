@@ -1,0 +1,62 @@
+.check-box {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sizing-md);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  color: var(--swan-font-color);
+}
+
+.check-box-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.check-box-control {
+  display: flex;
+  width: var(--sizing-xl);
+  height: var(--sizing-xl);
+  border: 1px solid var(--swan-faded-color);
+  border-radius: var(--sizing-xs);
+  background: transparent;
+
+  --check: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M7 12l3 3l7 -7' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+}
+
+.check-box-control::after {
+  content: "";
+    width: var(--sizing-xl);
+    height: var(--sizing-xl);
+    background-color: #fff;
+    -webkit-mask: var(--check) center / contain no-repeat;
+            mask: var(--check) center / contain no-repeat;
+    transform: scale(0);
+}
+
+.check-box-hidden:checked + .check-box-control {
+  background: var(--swan-accent-color);
+  border-color: var(--swan-bg-color);
+}
+.check-box-hidden:checked + .check-box-control::after {
+  transform: scale(1);
+}
+
+.check-box-hidden:focus-visible + .check-box-control {
+  outline: 2px solid var(--swan-accent-color);
+  outline-offset: 2px;
+}
+
+.check-box:has(.check-box-hidden:disabled) {
+  cursor: not-allowed;
+  color: var(--swan-faded-color);
+}
+.check-box-hidden:disabled + .check-box-control {
+  background: var(--swan-bg-color);
+  border-color: var(--swan-faded-color);
+}

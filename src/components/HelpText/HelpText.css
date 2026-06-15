@@ -1,0 +1,4 @@
+.help-text {
+    font-size: var(--font-size-mini);
+    color: var(--swan-faded-color);
+}

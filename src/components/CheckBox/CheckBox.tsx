@@ -1,5 +1,6 @@
- import { useId, type ComponentPropsWithoutRef } from "react";
-  import { cn } from "../../utils/cn";
+import { useId, type ComponentPropsWithoutRef } from "react";
+import { cn } from "../../utils/cn";
+import "./CheckBox.css";
 
   type CheckBoxProps = ComponentPropsWithoutRef<"input"> & {
     label: string;
@@ -10,9 +11,10 @@
     const elementId = id ?? generatedId;
 
     return (
-      <div className={cn("check-box", className)}>
-        <input id={elementId} type="checkbox" {...rest} />
-        <label htmlFor={elementId}>{label}</label>
-      </div>
+        <label htmlFor={elementId} className={cn("check-box", className)}>
+            <input id={elementId} type="checkbox" className="check-box-hidden" {...rest} />
+            <span className="check-box-control" aria-hidden="true"></span>
+            {label}
+        </label>
     );
   }

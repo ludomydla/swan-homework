@@ -1,5 +1,6 @@
 import type { ComponentPropsWithoutRef } from "react";
 import { cn } from "../../utils/cn";
+import "./HelpText.css";
 
 type HelpTextProps = Pick<ComponentPropsWithoutRef<"p">, "id" | "className"> & {
     text: string;

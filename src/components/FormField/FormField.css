@@ -1,9 +1,12 @@
 .form-field {
-  padding: var(--sizing-sm)
+  padding: var(--sizing-sm);
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sizing-md);
 }
 
-/* Target only the FormField's own label, not labels of nested controls */
-.form-field > label {
+.form-field .form-field-label {
   position: relative;
   display: inline-block;
   font-weight: 700;
@@ -11,11 +14,11 @@
 }
 
 /* Required indicator */
-.form-field-required > label::after {
+.form-field-required .form-field-label::after {
   position: absolute;
   right: -8px;
   top: calc(50% - var(--sizing-sm)/2);
-  content: " ";
+  content: "";
   display: block;
   width: var(--sizing-sm);
   height: var(--sizing-sm);

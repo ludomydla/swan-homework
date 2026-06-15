@@ -11,7 +11,7 @@ export default function FormField({label, required, children, className, ...rest
 
     return (
         <div {...rest} className={cn('form-field', required && 'form-field-required', className)} >
-            <label>{label}</label>
+            <div><label className="form-field-label">{label}</label></div>
             {children}
         </div>
     )
