@@ -6,9 +6,9 @@ function App() {
 
   return (
     <main>
-      <form>
+      <form className="form">
         <FormField label="Required field" required >
-          <CheckBox defaultChecked={true} label="Checkbox text" name="required"/>
+          <CheckBox defaultChecked={true} label="Checkbox text" name="required-one"/>
           <HelpText text="Example help text"/>
         </FormField>
 

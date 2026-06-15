@@ -1,0 +1,24 @@
+.form-field {
+  padding: var(--sizing-sm)
+}
+
+/* Target only the FormField's own label, not labels of nested controls */
+.form-field > label {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  font-size: var(--font-size-mini);
+}
+
+/* Required indicator */
+.form-field-required > label::after {
+  position: absolute;
+  right: -8px;
+  top: calc(50% - var(--sizing-sm)/2);
+  content: " ";
+  display: block;
+  width: var(--sizing-sm);
+  height: var(--sizing-sm);
+  border-radius: 50%;
+  background-color: var(--swan-accent-color);
+}

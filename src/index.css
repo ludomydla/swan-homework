@@ -1,3 +1,40 @@
+/* Nunito Sans (self-hosted, latin) */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/nunito-sans-v19-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./assets/fonts/nunito-sans-v19-latin-700.woff2") format("woff2");
+}
+
+:root {
+  --swan-font-color: #474747;
+  --swan-faded-color: #B2B2B2;
+  --swan-accent-color: #07C4C1;
+  --swan-bg-color: #E9E9E9;
+
+  --font-size-base: 1rem;
+  --font-size-mid: 0.9375rem;
+  --font-size-mini: 0.875rem;
+
+  --sizing-xs: 2px;
+  --sizing-sm: 4px;
+  --sizing-md: 8px;
+  --sizing-lg: 16px;
+  --sizing-xl: 24px;
+}
+
+form {
+  padding: var(--sizing-xl);
+}
+
 /* Basic CSS reset by Josh W. Comeau */
 /* https://www.joshwcomeau.com/css/custom-css-reset/*/
 
@@ -19,6 +56,8 @@
 }
 
 body {
+  /* Default font */
+  font-family: "Nunito Sans", system-ui, sans-serif;
   /* 4. Increase line-height */
   line-height: 1.5;
   /* 5. Improve text rendering */
